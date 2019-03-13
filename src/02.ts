@@ -1,6 +1,6 @@
 //5
 abstract class Car {
-    constructor(mileage:number, fuel:number) {}
+    constructor(protected _mileage:number, protected _fuel:number) {}
 
     abstract drive(kilometers:number):void;
     abstract refuel(count:number):void;
@@ -17,10 +17,10 @@ class Toyota extends Car {
         this._fuel = fuel;
         this._mileage = mileage;
     }
-    public get mileage() {
+    public get mileage():number {
         return this._mileage;
     }
-    public get fuel() {
+    public get fuel():number {
         return this._fuel;
     }
     public drive(kilometers:number):void {

@@ -6,7 +6,7 @@ console.log("1", factorial(5));
 
 //2
 function multiply(...numbers:number[]):number {
-    return numbers.length ? numbers.reduce((a, b) => a * b) : 0;
+    return numbers.length ? numbers.reduce((a:number, b:number) => a * b) : 0;
 }
 console.log("2.1", multiply(1,2,3));
 console.log("2.2", multiply());
@@ -34,7 +34,7 @@ console.log("3.2", reverseString("hello"));
 interface Admin {
     field: string; 
     stores: string;
-    type: string;
+    type?: string;
     required: boolean;
     defaults: string;
 }
